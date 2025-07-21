@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AUME Career</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0d1f1d;
       color: #ffffff;
+      /* Add smooth transitions for any potential background/color changes */
+      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
     header {
@@ -20,11 +22,19 @@
       padding: 20px;
       background-color: #0a1614;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      /* Add subtle transition for header changes */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     header img {
       width: 85px;
       margin-bottom: 10px;
+      /* Add a subtle scale effect on hover */
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+        transform: scale(1.05);
     }
 
     header h1 {
@@ -42,6 +52,8 @@
       text-decoration: none;
       color: #d4d4d4;
       font-weight: 500;
+      /* Add transition for hover effect */
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -52,6 +64,8 @@
       text-align: center;
       padding: 80px 20px;
       background-color: #112c28;
+      /* Ensure sections also have a transition if needed, though AOS handles main animation */
+      transition: background-color 0.3s ease;
     }
 
     .hero h2 {
@@ -78,11 +92,19 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
+      /* Add transition for hover effect */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e0c84f; /* Slightly darker yellow on hover */
+      transform: translateY(-2px); /* Subtle lift effect */
     }
 
     .section {
       padding: 60px 40px;
       background-color: #0f2623;
+      transition: background-color 0.3s ease; /* Transition for section background */
     }
 
     .section h3 {
@@ -114,6 +136,13 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      /* Add transition for hover effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-card:hover {
+        transform: translateY(-5px); /* Lift card on hover */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4); /* Enhanced shadow on hover */
     }
 
     .step-card h4 {
@@ -130,6 +159,7 @@
       padding: 50px 20px;
       text-align: center;
       background-color: #112c28;
+      transition: background-color 0.3s ease; /* Transition for newsletter background */
     }
 
     .newsletter h3 {
@@ -150,6 +180,13 @@
       border: none;
       border-radius: 6px;
       margin-right: 10px;
+      /* Add transition for focus effect */
+      transition: all 0.3s ease;
+    }
+
+    .newsletter input[type="email"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(249, 220, 92, 0.5); /* Yellow glow on focus */
     }
 
     .newsletter button {
@@ -160,6 +197,13 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      /* Add transition for hover effect */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background-color: #e0c84f; /* Slightly darker yellow on hover */
+      transform: translateY(-2px); /* Subtle lift effect */
     }
 
     footer {
@@ -168,11 +212,17 @@
       text-align: center;
       color: #aaaaaa;
       font-size: 14px;
+      transition: background-color 0.3s ease; /* Transition for footer background */
     }
 
     footer a {
       color: #f9dc5c;
       text-decoration: none;
+      transition: color 0.3s ease; /* Transition for link color */
+    }
+
+    footer a:hover {
+      color: #fff;
     }
 
     @media(max-width: 600px) {
@@ -198,9 +248,9 @@
 <body>
 
   <header>
-    <img src="https://i.ibb.co/ZRjTbY2L/file-00000000650861f9bad2ae3237c73eb5.png" alt="AUME Logo" />
-    <h1>AUME Career</h1>
-    <nav>
+    <img src="https://i.ibb.co/ZRjTbY2L/file-00000000650861f9bad2ae3237c73eb5.png" alt="AUME Logo" data-aos="zoom-in"/>
+    <h1 data-aos="fade-up" data-aos-delay="100">AUME Career</h1>
+    <nav data-aos="fade-up" data-aos-delay="200">
       <a href="#">Home</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -208,31 +258,31 @@
   </header>
 
   <div class="hero">
-    <h2>Your Career. Our Mission.</h2>
-    <p>
+    <h2 data-aos="fade-up">Your Career. Our Mission.</h2>
+    <p data-aos="fade-up" data-aos-delay="200">
       Expert career coaching to build strong resumes, sharpen your online presence, and illuminate your professional path.
       Join our <strong>FREE Weekly Career Guidance Workshops</strong> for students, job seekers, and anyone feeling lost.
     </p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfibfx1GAn_5uryLrHAH0TsPVErMbf-vjkELFhOW6S68l6qxQ/viewform"
-       class="cta-button" target="_blank">Start Your Journey Here</a>
+       class="cta-button" target="_blank" data-aos="zoom-in" data-aos-delay="400">Start Your Journey Here</a>
   </div>
 
   <div class="section" id="services">
-    <h3>How We Help You</h3>
+    <h3 data-aos="fade-up">How We Help You</h3>
     <div class="steps-grid">
-      <div class="step-card">
+      <div class="step-card" data-aos="fade-right" data-aos-delay="100">
         <h4>Step 1: Free Consultation</h4>
         <p>We connect and understand your current career standing and future goals.</p>
       </div>
-      <div class="step-card">
+      <div class="step-card" data-aos="fade-right" data-aos-delay="200">
         <h4>Step 2: Profile Diagnosis</h4>
         <p>We analyze your resume, LinkedIn, and personal branding assets.</p>
       </div>
-      <div class="step-card">
+      <div class="step-card" data-aos="fade-right" data-aos-delay="300">
         <h4>Step 3: Expert Guidance</h4>
         <p>Our career experts suggest what to improve and build, step-by-step.</p>
       </div>
-      <div class="step-card">
+      <div class="step-card" data-aos="fade-right" data-aos-delay="400">
         <h4>Step 4: 24/7 Mentorship</h4>
         <p>We stay connected with you for ongoing growth, corrections, and clarity.</p>
       </div>
@@ -240,18 +290,26 @@
   </div>
 
   <div class="newsletter" id="newsletter">
-    <h3>Stay Updated</h3>
-    <p>Subscribe to receive career tips, resume formats, and workshop invites straight to your inbox.</p>
-    <form>
+    <h3 data-aos="fade-up">Stay Updated</h3>
+    <p data-aos="fade-up" data-aos-delay="100">Subscribe to receive career tips, resume formats, and workshop invites straight to your inbox.</p>
+    <form data-aos="zoom-in" data-aos-delay="200">
       <input type="email" placeholder="Enter your email" required>
       <button type="submit">Subscribe</button>
     </form>
   </div>
 
   <footer id="contact">
-    <p>Contact us at: <a href="mailto:infoaume.in@gmail.com">infoaume.in@gmail.com</a></p>
-    <p>&copy; 2025 AUME Career. All rights reserved.</p>
+    <p data-aos="fade-up">Contact us at: <a href="mailto:infoaume.in@gmail.com">infoaume.in@gmail.com</a></p>
+    <p data-aos="fade-up" data-aos-delay="100">&copy; 2025 AUME Career. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // only animate once per element
+      mirror: false,  // whether elements should animate out while scrolling past them
+    });
+  </script>
 
 </body>
 </html>
